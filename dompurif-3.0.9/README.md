@@ -1,6 +1,6 @@
 # Dompurify 3.0.9 bypass - Node type confusion
 
-Lien vers l'article complet : https://sharpforce.gitbook.io/cybersecurity/mes-articles/2024/mai/dompurify-3.0.9-bypass-node-type-confusion
+Link to the full article (in french) : https://sharpforce.gitbook.io/cybersecurity/mes-articles/2024/mai/dompurify-3.0.9-bypass-node-type-confusion
 
 ## Installation
 
@@ -13,17 +13,17 @@ docker run -p 3000:3000 dompurify-3.0.9-bypass
 
 ## Description
 
-L'application permet de téléverser des fichiers au format HTML, SVG ou XHTML, mais la consultation de ces fichiers, bien que possible, est restreinte par une politique CSP. L'inclusion d'un tel fichier, assainie par Dompurify, au sein de la page principale, permet toutefois l'exploitation du bypass et l'exécution de code Javascript.
+The application allows uploading files in HTML, SVG, or XHTML format, but accessing these files, although possible, is restricted by a CSP policy. However, including such a file, sanitized by Dompurify, within the main page, enables bypass exploitation and execution of JavaScript code.
 
 ## Exploitation
 
-### Fichier HTML
+### HTML file
 
-La vulnérabilité est exploitable seulement lorsque le noeud est de type XML. L'inclusion d'un fichier HTML permet de confirmer le bon assainissement de la part de Dompurify lorsque le noeud est de type HTML.
+The vulnerability is exploitable only when the node is of XML type. Including an HTML file confirms the proper sanitization by Dompurify when the node is of HTML type.
 
-### Fichier SVG
+### SVG file
 
-Le fichier SVG suivant permet l'exploitation du bypass :
+The following SVG file allows bypass exploitation:
 ```
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
@@ -32,9 +32,9 @@ Le fichier SVG suivant permet l'exploitation du bypass :
 </svg>
 ```
 
-### Fichier XHTML
+### XHTML file
 
-Le fichier XHTML suivant permet l'exploitation du bypass :
+The following XHTML file allows bypass exploitation:
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
