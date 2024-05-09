@@ -1,5 +1,7 @@
 # Dompurify 3.0.9 bypass - Node type confusion
 
+__Read this in other languages:__ [English](README.md), [Français](README.fr.md)
+
 Link to the full article (in french) : https://sharpforce.gitbook.io/cybersecurity/mes-articles/2024/mai/dompurify-3.0.9-bypass-node-type-confusion
 
 ## Installation
