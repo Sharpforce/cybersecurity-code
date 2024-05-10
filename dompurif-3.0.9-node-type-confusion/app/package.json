@@ -1,5 +1,5 @@
 {
-  "name": "dompurify-3.0.9-untrusted-node-bypass",
+  "name": "dompurify-3.0.9-node-type-confusion",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
