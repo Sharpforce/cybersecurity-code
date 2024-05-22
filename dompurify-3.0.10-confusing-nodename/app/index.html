@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dompurify 3.0.10 - Confusion nodeName</title>
+        <link href="./styles/bootstrap-5.3.3.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./">Home</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <div class="row w-100">
+                    <div class="col text-center">
+                        <div class="fs-5 text-uppercase">Créer un document</div>
+                    </div>
+                    <div class="col text-center">
+                        <div class="fs-5 text-uppercase">Téléverser une image (format SVG)</div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="text-center mt-5">
+                        <form method="GET" action="./">
+                            <label for="url">Inclure un document SVG :</label>
+                            <input type="url" id="url" name="url" placeholder="Renseigner l'URL complète" required>
+                            <input type="submit" value="Valider">
+                        </form>
+
+                        <div id="userContent">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="text-center mt-5">
+                        <form action="./upload" method="POST" enctype="multipart/form-data">
+                            <input type="file" name="file" />
+                            <input type="submit" value="Téléverser">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./js/dompurify-3.0.10.js"></script>        
+        <script>
+            let url = new URLSearchParams(window.location.search).get('url');
+            
+            if(url !== null) {
+                let urlOrigin = new URL(url).origin;
+                let appOrigin = window.location.origin;
+
+                if (urlOrigin === appOrigin) {
+                    let xhr = new XMLHttpRequest();
+
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState === 4 && xhr.status === 200) {
+                            let content = xhr.responseText;
+                            let extension = xhr.responseURL.split('.').pop().toLowerCase();
+
+                            if (extension === "html") {
+                                let html = new DOMParser().parseFromString(content, "text/html").documentElement;
+                                let userContent = document.getElementById('userContent');
+                                userContent.innerHTML = DOMPurify.sanitize(html);
+                            }
+                            else if (extension === "svg") {
+                                let svg = new DOMParser().parseFromString(content, "image/svg+xml").documentElement;
+                                let userContent = document.getElementById('userContent');
+                                userContent.innerHTML = DOMPurify.sanitize(svg);
+                            }
+                            else if (extension === "xhtml") {
+                                let xhtml = new DOMParser().parseFromString(content, "application/xhtml+xml").documentElement;
+                                let userContent = document.getElementById('userContent');
+                                userContent.innerHTML = DOMPurify.sanitize(xhtml);
+                            }
+                        }
+                    }
+                    xhr.open("GET", url, true);
+                    xhr.send();
+                }                  
+                else {
+                    alert("Seul des documents téléversés sur la plateforme sont autorisés.");
+                }
+            }
+        </script>
+    </body>
+</html>

