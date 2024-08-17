@@ -1,15 +1,13 @@
 {
-  "name": "dompurify-3.0.10-confusion-nodename",
+  "name": "dompurify-3.0.10-bypass-confusion-nodename-and-cdata",
+  "author": "Sharpforce",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "dompurify": "3.0.9",
+    "dompurify": "3.0.10",
     "express": "^4.19.2",
     "jsdom": "^24.0.0",
     "multer": "^1.4.5-lts.1",
