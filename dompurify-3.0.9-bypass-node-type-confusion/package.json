@@ -1,13 +1,11 @@
 {
-  "name": "dompurify-3.0.9-node-type-confusion",
+  "name": "dompurify-3.0.9-bypass-node-type-confusion",
+  "author": "Sharpforce",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "dompurify": "3.0.9",
     "express": "^4.19.2",

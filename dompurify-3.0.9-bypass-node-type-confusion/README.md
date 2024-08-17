@@ -53,3 +53,7 @@ Le fichier XHTML suivant permet l'exploitation du bypass :
 </body>
 </html>
 ```
+
+## Démo
+
+![](https://github.com/Sharpforce/cybersecurity-code/blob/master/dompurify-3.0.9-bypass-node-type-confusion/demo/demo.gif)
