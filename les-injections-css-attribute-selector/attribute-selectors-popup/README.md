@@ -7,6 +7,8 @@ $ docker-compose build
 $ docker-compose up -d
 ```
 
+![image](https://github.com/user-attachments/assets/72927a15-b4e5-47b0-8112-dda6541b000a)
+
 ## Description
 
 PoC d'exploitation d'une injection CSS en utilisant l'ouverture de popups afin de récupérer la valeur d'un attribut d'un élément HTML de type "password" ou "hidden".
