@@ -7,6 +7,8 @@ $ docker-compose build
 $ docker-compose up -d
 ```
 
+![image](https://github.com/user-attachments/assets/fe8341f6-6669-40da-9f2c-98f9db147432)
+
 ## Description
 
 PoC d'exploitation d'une injection CSS en utilisant la pseudo class has() afin de récupérer la valeur d'un attribut d'un élément HTML de type "password" ou "hidden".
