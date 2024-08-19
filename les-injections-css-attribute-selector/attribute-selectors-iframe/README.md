@@ -7,6 +7,8 @@ $ docker-compose build
 $ docker-compose up -d
 ```
 
+![image](https://github.com/user-attachments/assets/9fae4372-d12f-4d45-81c5-2462d7562288)
+
 ## Description
 
 PoC d'exploitation d'une injection CSS en utilisant les sélecteurs d'attributs afin de récupérer la valeur d'un attribut d'un élément HTML de type "password" ou "hidden".
