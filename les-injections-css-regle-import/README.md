@@ -13,7 +13,7 @@ $ docker-compose build
 $ docker-compose up -d
 ```
 
-![image](https://github.com/user-attachments/assets/130254a0-34a3-48aa-9c86-1ae961c8be69)
+![image](https://github.com/user-attachments/assets/ad7cb905-bf6c-4e6e-acc6-d9491a9dc4b8)
 
 ## Description
 
