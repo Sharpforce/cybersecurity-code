@@ -7,7 +7,7 @@ $ docker-compose build
 $ docker-compose up -d
 ```
 
-
+![image](https://github.com/user-attachments/assets/9d0e2603-337d-45c4-a6e9-3713bc997eb1)
 
 ## Description
 
