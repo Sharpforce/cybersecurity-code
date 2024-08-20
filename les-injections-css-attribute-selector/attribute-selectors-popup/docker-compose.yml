@@ -3,7 +3,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.vulnerable-web
-    container_name: php_apache_vulnerable-web
     ports:
       - "80:80"
 
@@ -11,6 +10,5 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.attacker-web
-    container_name: php_apache_attacker-web
     ports:
       - "81:80"

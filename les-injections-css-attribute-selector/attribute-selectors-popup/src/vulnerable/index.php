@@ -10,7 +10,7 @@
         </style>
     </head>
     <body>
-        <h1>Récupération de la valeur d'un attribut d'un élément HTML via les sélecteurs d'attribut CSS</h1>
+        <h1>Récupération de la valeur d'un attribut d'un élément HTML via les Popups</h1>
         <h2>PoC #1 - Champ de type password</h2>
         <form method="POST" action="">
             <input type="password" name="password" value="qwerty">

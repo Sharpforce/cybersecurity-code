@@ -10,6 +10,8 @@
         }
         else {
             file_put_contents($preCharsFile, $_GET['pre']);
+            //$event = new SyncEvent(file_get_contents($syncIdFile));
+            //$event->fire();
         }
     }
 

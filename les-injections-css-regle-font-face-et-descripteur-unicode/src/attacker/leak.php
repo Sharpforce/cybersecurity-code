@@ -1,12 +1,6 @@
 <?php
-    if (isset($_GET['char'])) {
-        $char = $_GET['char'];
-        $filePath = 'leak.html';
-        $fileHandle = fopen($filePath, 'a');
-
-        if ($fileHandle) {
-            fwrite($fileHandle, $char);
-            fclose($fileHandle);
-        }
+    if(isset($_GET['char'])) {
+        $file = 'leak.html';
+        file_put_contents($file, $_GET['char'], FILE_APPEND);
     }
 ?>
