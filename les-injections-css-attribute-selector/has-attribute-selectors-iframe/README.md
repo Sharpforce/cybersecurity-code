@@ -19,9 +19,9 @@ PoC d'exploitation d'une injection CSS en utilisant la pseudo class has() afin d
 
 ## Démo
 
-![](https://github.com/Sharpforce/PoC-CSS-injection/blob/main/les-injections-css-attribute-selector/has-attribute-selectors-iframe/demo/demo_1.gif)
+![](https://github.com/Sharpforce/cybersecurity-code/blob/main/les-injections-css-attribute-selector/has-attribute-selectors-iframe/demo/demo_1.gif)
 
-![](https://github.com/Sharpforce/PoC-CSS-injection/blob/main/les-injections-css-attribute-selector/has-attribute-selectors-iframe/demo/demo_2.gif)
+![](https://github.com/Sharpforce/cybersecurity-code/blob/main/les-injections-css-attribute-selector/has-attribute-selectors-iframe/demo/demo_2.gif)
 
 ## Disclaimer
 
