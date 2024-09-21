@@ -55,7 +55,7 @@ Le fichier XHTML suivant permet l'exploitation du bypass :
 
 ## Démo
 
-![](https://github.com/Sharpforce/cybersecurity-code/blob/master/dompurify-3.0.10-bypass-confusion-nodename-and-cdata/demo/demo.gif)
+![](https://github.com/Sharpforce/cybersecurity-code/blob/main/dompurify-3.0.10-bypass-confusion-nodename-and-cdata/demo/demo.gif)
 
 ## Disclaimer
 

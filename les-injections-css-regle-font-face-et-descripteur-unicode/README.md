@@ -21,7 +21,7 @@ PoC d'exploitation d'une injection CSS en utilisant la règle @font-face ainsi q
 
 ## Démo
 
-![](https://github.com/Sharpforce/cybersecurity-code/blob/master/les-injections-css-regle-font-face-et-descripteur-unicode/demo/demo.gif)
+![](https://github.com/Sharpforce/cybersecurity-code/blob/main/les-injections-css-regle-font-face-et-descripteur-unicode/demo/demo.gif)
 
 ## Disclaimer
 

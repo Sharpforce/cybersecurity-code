@@ -56,7 +56,7 @@ Le fichier XHTML suivant permet l'exploitation du bypass :
 
 ## Démo
 
-![](https://github.com/Sharpforce/cybersecurity-code/blob/master/dompurify-3.0.9-bypass-node-type-confusion/demo/demo.gif)
+![](https://github.com/Sharpforce/cybersecurity-code/blob/main/dompurify-3.0.9-bypass-node-type-confusion/demo/demo.gif)
 
 ## Disclaimer
 

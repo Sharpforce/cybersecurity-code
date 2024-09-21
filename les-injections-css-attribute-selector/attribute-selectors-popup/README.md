@@ -20,9 +20,9 @@ PoC d'exploitation d'une injection CSS en utilisant l'ouverture de popups afin d
 
 ## Démo
 
-![](https://github.com/Sharpforce/PoC-CSS-injection/blob/master/les-injections-css-attribute-selector/attribute-selectors-popup/demo/demo_1.gif)
+![](https://github.com/Sharpforce/PoC-CSS-injection/blob/main/les-injections-css-attribute-selector/attribute-selectors-popup/demo/demo_1.gif)
 
-![](https://github.com/Sharpforce/PoC-CSS-injection/blob/master/les-injections-css-attribute-selector/attribute-selectors-popup/demo/demo_2.gif)
+![](https://github.com/Sharpforce/PoC-CSS-injection/blob/main/les-injections-css-attribute-selector/attribute-selectors-popup/demo/demo_2.gif)
 
 ## Disclaimer
 

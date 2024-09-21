@@ -26,9 +26,9 @@ PoC d'exploitation d'une injection CSS en utilisant les sélecteurs d'attribut, 
 
 ## Démo
 
-![](https://github.com/Sharpforce/cybersecurity-code/blob/master/les-injections-css-regle-import/demo/demo_1.gif)
+![](https://github.com/Sharpforce/cybersecurity-code/blob/main/les-injections-css-regle-import/demo/demo_1.gif)
 
-![](https://github.com/Sharpforce/cybersecurity-code/blob/master/les-injections-css-regle-import/demo/demo_2.gif)
+![](https://github.com/Sharpforce/cybersecurity-code/blob/main/les-injections-css-regle-import/demo/demo_2.gif)
 
 ## Disclaimer
 

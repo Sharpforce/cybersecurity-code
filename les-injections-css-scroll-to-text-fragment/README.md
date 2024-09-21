@@ -15,7 +15,7 @@ PoC d'exploitation d'une injection CSS permettant de savoir si une corrence d'un
 
 ## Démo
 
-![](https://github.com/Sharpforce/PoC-CSS-injection/blob/master/les-injections-css-scroll-to-text-fragment/demo/demo.gif)
+![](https://github.com/Sharpforce/PoC-CSS-injection/blob/main/les-injections-css-scroll-to-text-fragment/demo/demo.gif)
 
 ## Disclaimer
 
